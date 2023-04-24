@@ -11,7 +11,7 @@ def home():
 def upload():
     if request.method == 'POST':
         f = request.files['fileip']
-        f.save('x-rays/'+secure_filename(f.filename))
+        f.save(secure_filename(f.filename))
         return ''+f.filename
 
 if __name__ == '__main__':
